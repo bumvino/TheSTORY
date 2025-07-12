@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Story Church</title>
+    <link rel="stylesheet" href="/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="<%= currentPage === 'home' ? 'home-page' : '' %>">
+
+<header id="main-header" class="<%= currentPage === 'home' ? 'transparent' : 'scrolled' %>">
+    <div class="top-bar">
+        <a href="/" class="logo-link">
+            <div class="logo-bar">
+                <img
+                        id="site-logo"
+                        src="<%= currentPage === 'home' ? '/logo-light.png' : '/logo-dark.png' %>"
+                        alt="The Story Church logo"
+                        class="logo">
+                <h1 class="site-title"></h1>
+            </div>
+        </a>
+        <div class="nav-and-icons">
+            <nav>
+                <a href="/about" class="<%= currentPage === 'about' ? 'active' : '' %>">ABOUT</a>
+                <a href="/visit" class="<%= currentPage === 'visit' ? 'active' : '' %>">VISIT</a>
+                <a href="/connect" class="<%= currentPage === 'connect' ? 'active' : '' %>">CONNECT</a>
+                <a href="/watch" class="<%= currentPage === 'watch' ? 'active' : '' %>">WATCH</a>
+                <a href="/events" class="<%= currentPage === 'events' ? 'active' : '' %>">EVENTS</a>
+                <a href="/give" class="<%= currentPage === 'give' ? 'active' : '' %>">GIVE</a>
+            </nav>
+            <div class="social-inline">
+                <a href="https://www.instagram.com/the.story.wc/" target="_blank" aria-label="Instagram">
+                    <img src="/icons/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://www.youtube.com/@TheStoryWorshipingCommunity" target="_blank" aria-label="YouTube">
+                    <img src="/icons/youtube.svg" alt="YouTube" class="youtube-icon">
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<% if (currentPage === 'home') { %>
+    <section class="hero">
+        <div class="hero-overlay">
+            <h2>Welcome to The Story Church</h2>
+            <p>God is writing the STORY through us. We are the STORY of God.</p>
+        </div>
+    </section>
+<% } %>
+
+<main class="<%= currentPage !== 'home' ? 'with-header-space' : '' %>">
+    <%- body %>
+</main>
+
+<footer>
+    <p>© 2025 The Story Worshiping Community</p>
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>

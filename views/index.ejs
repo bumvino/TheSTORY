@@ -1,0 +1,42 @@
+<% if (currentPage === 'home') { %>
+    <section class="welcome-heading">
+        <h2>Welcome to The STORY</h2>
+    </section>
+
+    <section class="hero-links">
+        <a href="/about" class="hero-link">
+            <img src="/icons/about.svg" alt="About">
+            <span>주보</span>
+        </a>
+        <a href="/visit" class="hero-link">
+            <img src="/icons/visit.svg" alt="Visit">
+            <span>오시는길</span>
+        </a>
+        <a href="/connect" class="hero-link">
+            <img src="/icons/connect.svg" alt="Connecting">
+            <span>새가족안내</span>
+        </a>
+        <a href="/give" class="hero-link">
+            <img src="/icons/give.svg" alt="Give">
+            <span>온라인 헌금</span>
+        </a>
+    </section>
+<% } %>
+
+<section class="content-section">
+    <h3>Latest Sermons</h3>
+    <ul>
+        <% sermons.slice(0, 3).forEach(sermon => { %>
+            <li><strong><%= sermon.title %></strong> – <%= sermon.date %></li>
+        <% }) %>
+    </ul>
+</section>
+
+<section class="content-section">
+    <h3>Upcoming Events</h3>
+    <ul>
+        <% events.slice(0, 3).forEach(event => { %>
+            <li><strong><%= event.title %></strong> – <%= event.date %></li>
+        <% }) %>
+    </ul>
+</section>

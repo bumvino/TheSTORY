@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent;
+    padding: 1rem 2rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.transparent {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+header.scrolled {
+    background-color: #28C3EA;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+/* Logo text color depends on header state */
+header.transparent .site-title {
+    color: white;
+}
+
+header.scrolled .site-title {
+    color: #000000; /* or black if preferred */
+}
+
+/* Transparent Header (on homepage) */
+header.transparent nav a {
+    color: white;
+}
+
+/* Scrolled Header (after scrolling or on other pages) */
+header.scrolled nav a {
+    color: black;
+}
+
+/* When header is transparent (on top of homepage) */
+header.transparent .social-inline img {
+    filter: brightness(0) invert(1); /* Makes icons white */
+}
+
+/* When header is scrolled (or on other pages) */
+header.scrolled .social-inline img {
+    filter: none; /* Keeps original black/dark icon */
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    height: 75px;
+    width: auto;
+}
+
+.logo-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-link:visited {
+    color: inherit;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #1e2a38;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a.active {
+    text-decoration: underline;
+    color: #000000; /* Optional: darker to emphasize */
+}
+
+.nav-and-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+main.with-header-space {
+    padding-top: 140px; /* adjust based on your header height */
+}
+
+h2, h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+footer {
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    color: #888;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 90%;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-links {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 2rem 0;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+    border-top: 1px solid #eee;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.hero-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #1e2a38;
+    font-weight: 600;
+    width: 80px;
+    transition: transform 0.2s ease;
+}
+
+.hero-link img {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 0.5rem;
+}
+
+.hero-link:hover {
+    transform: translateY(-4px);
+    color: #87CEEB;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.content-section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero .vision {
+    font-style: italic;
+    color: #87CEEB;
+    margin-top: 1rem;
+}
+
+.section {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    margin-top: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 0.5rem;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+    filter: brightness(0.7);
+}
+
+.social-inline {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-inline img {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.2s ease;
+}
+
+.social-inline a:hover img {
+    transform: scale(1.2);
+    filter: brightness(0.7);
+}
+
+.youtube-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 24px; /* adjust spacing as needed */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.welcome-heading {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 2rem 1rem 1rem;
+    margin: 0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+.welcome-heading h2 {
+    font-size: 2rem;
+    color: #000000; /* Black text */
+    margin: 0;
+}

@@ -1,0 +1,6 @@
+<h2>Sermons</h2>
+<ul>
+    <% sermons.forEach(sermon => { %>
+        <li><strong><%= sermon.title %></strong> by <%= sermon.speaker %> – <%= sermon.date %></li>
+    <% }) %>
+</ul>
