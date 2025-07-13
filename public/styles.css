@@ -186,7 +186,7 @@ footer {
 .hero-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 6rem;
     padding: 2rem 0;
     background-color: #ffffff;
     flex-wrap: wrap;
